@@ -18,3 +18,8 @@ class SkillsController < ApplicationController
       end
   end
 
+  private
+    def skill_params
+      params.require(:skill).permit(:name, :description)
+    end
+end
