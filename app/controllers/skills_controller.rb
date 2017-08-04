@@ -3,6 +3,12 @@ class SkillsController < ApplicationController
     @skills = Skill.all
   end
 
+  def show
+       @skill = List.find(params[:id])
+       render :show
+  end
+
+
   def new
    @skill = Skill.new
    @skills = Skill.all
