@@ -4,7 +4,7 @@ class SkillsController < ApplicationController
   end
 
   def show
-       @skill = List.find(params[:id])
+       @skill = Skill.find(params[:id])
        render :show
   end
 
@@ -36,6 +36,12 @@ class SkillsController < ApplicationController
       else
         render :edit
       end
+  end
+
+  def destroy
+      @skill = List.find(params[:id])
+      @skill.destroy
+      redirect_to skills_path
   end
 
 
