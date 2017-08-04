@@ -1,0 +1,7 @@
+<h3><%= @skill.name%></h3>
+<p><%= @skill.description%></p>
+
+<p><%= link_to "Edit", edit_skill_path(@skill) %></p>
+<p><%= link_to "Delete", skill_path(@skill),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %></p>
