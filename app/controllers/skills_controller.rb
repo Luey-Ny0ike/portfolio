@@ -19,9 +19,19 @@ class SkillsController < ApplicationController
   end
 
   def edit
-      @Skill = Skill.find(params[:id])
+      @skill = Skill.find(params[:id])
       render :edit
   end
+
+  def update
+      @skill= Skill.find(params[:id])
+      if @skill.update(skill_params)
+        redirect_to skills_path
+      else
+        render :edit
+      end
+  end
+
 
   private
     def skill_params
