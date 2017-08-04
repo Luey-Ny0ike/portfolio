@@ -18,6 +18,11 @@ class SkillsController < ApplicationController
       end
   end
 
+  def edit
+      @Skill = Skill.find(params[:id])
+      render :edit
+  end
+
   private
     def skill_params
       params.require(:skill).permit(:name, :description)
