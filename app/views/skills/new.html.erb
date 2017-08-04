@@ -3,8 +3,10 @@
 <% if @skills.any?%>
   <ul>
     <% @skills.each do |skill| %>
-      <li><%= skill.name %></li>
-      <li><%= skill.description %></li>
+    <% @skills.each do |skill| %>
+     <li><%= link_to skill.name, skill_path(skill) %></li>
+   <% end %>
+
     <% end %>
   </ul>
 <% else %>
