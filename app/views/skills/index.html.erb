@@ -1,0 +1,12 @@
+<h1>Skills you have</h1>
+
+<% if @skills.any?%>
+  <ul>
+    <% @skills.each do |skill| %>
+      <li><%= skill.name %></li>
+      <li><%= skill.description %></li>
+    <% end %>
+  </ul>
+<% else %>
+<p>No skills yet</p>
+<% end %>
