@@ -26,3 +26,11 @@
           render :edit
         end
     end
+
+    def destroy
+        @skill = Skill.find(params[:skill_id])
+        @project = Project.find(params[:id])
+        @project.destroy
+        redirect_to skill_path(@project.skill)
+    end
+
