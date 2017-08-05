@@ -1,3 +1,4 @@
+class ProjectsController < ApplicationController
     def new
       @skill = Skill.find(params[:skill_id])
       @project = @skill.projects.new
@@ -34,3 +35,8 @@
         redirect_to skill_path(@project.skill)
     end
 
+ private
+   def project_params
+     params.require(:project).permit(:name, :description, :link, :image)
+   end
+end
