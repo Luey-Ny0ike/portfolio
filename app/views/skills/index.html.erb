@@ -1,12 +1,64 @@
-<h1>Skills you have</h1>
+<div class="container-fluid fill">
+  <img src="https://images.pexels.com/photos/116021/pexels-photo-116021.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
 
-<% if @skills.any?%>
-  <ul>
-    <% @skills.each do |skill| %>
-      <li><%= skill.name %></li>
-      <li><%= skill.description %></li>
+</div>
+
+<div class="container about">
+  <h2>About</h2>
+  <p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be?<br>
+    He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when...
+    <br>You know why, David? Because of the kids. They called me Mr Glass.</p>
+  <p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be?<br>
+    He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when...
+    <br>You know why, David? Because of the kids. They called me Mr Glass.</p>
+  <p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be?<br>
+    He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when...
+    <br>You know why, David? Because of the kids. They called me Mr Glass.</p>
+  <p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be?<br>
+    He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when...
+    <br>You know why, David? Because of the kids. They called me Mr Glass.</p>
+</div>
+
+<div class="container-fluid quote">
+<div class="parallax">
+  <p>Cupcakes are Muffins that </p>
+  <p>beleived in miracles</p>
+  <p>~Luey</p>
+</div>
+</div>
+
+<div class="container-fluid">
+  <div class="skills">
+    <h2>Skills</h2>
+    <% if @skills.any?%>
+    <ul>
+      <% @skills.each do |skill| %>
+        <button type="button" class="btn btn-info" id='descriptionShow'><%= skill.name %></li></button>
+    <div class="row collapse">
+      <div class="col-md-4">
+        <li><%= skill.description %>
+      </div>
+    </div>
     <% end %>
   </ul>
-<% else %>
-<p>No skills yet</p>
-<% end %>
+  <% else %>
+  <p>No skills yet</p>
+  <% end %>
+  </div>
+</div>
+<h1>Skills you have</h1>
+<div class="container">
+  <h2>Collapsible Methods</h2>
+  <p>The toggle method toggles the collapsible content.</p>
+  <p>The show method shows the collapsible content.</p>
+  <p>The hide method hides the collapsible content.</p>
+  <button type="button" class="btn btn-primary">Toggle</button>
+  <button type="button" class="btn btn-success">Show</button>
+  <button type="button" class="btn btn-warning">Hide</button>
+
+  <div class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+</div>

@@ -1,0 +1,90 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.navbar-brand {
+  .brand {
+    font-style: normal;
+    font-size: 38px;
+  }
+}
+
+.fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+.fill img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.about{
+  h2{
+    text-align: center;
+    font-style: oblique;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+  }
+  padding-left: 59px;
+  padding-right: 59px;
+  font-size: 16px;
+}
+.quote{
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  .parallax {
+
+  /* The image used */
+  background-image: url('https://images.pexels.com/photos/116021/pexels-photo-116021.jpeg?h=350&auto=compress&cs=tinysrgb');
+
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+  /* Full height */
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+}
+.skills{
+  h2{
+    text-align: center;
+    font-style: oblique;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .description{
+    display: none;
+  }
+}
