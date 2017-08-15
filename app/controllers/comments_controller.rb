@@ -1,20 +1,21 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
-
-  # GET /blogs/1/comments
-  # GET /comments.json
-  def index
-    @blog = Blog.find(params[:blog_id])
-    @comments = Comment.all
-  end
-
-  # GET /comments/1
-  # GET /comments/1.json
-  def show
-    @blog = Blog.find(params[:blog_id])
-    @comment = @blog.comments.find(params[:id])
-    render :show
-  end
+  before_action :authenticate_user!, :only => [:new, :edit, :delete]
+  #
+  # # GET /blogs/1/comments
+  # # GET /comments.json
+  # def index
+  #   @blog = Blog.find(params[:blog_id])
+  #   @comments = Comment.all
+  # end
+  #
+  # # GET /comments/1
+  # # GET /comments/1.json
+  # def show
+  #   @blog = Blog.find(params[:blog_id])
+  #   @comment = @blog.comments.find(params[:id])
+  #   render :show
+  # end
 
   def new
     @blog = Blog.find(params[:blog_id])
