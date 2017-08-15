@@ -10,5 +10,7 @@
   <%= @blog.blog %>
 </p>
 
+<% if admin_signed_in? %>
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>
+<% end %>
