@@ -20,9 +20,8 @@
     <% @comments.each do |comment| %>
       <tr>
         <td><%= comment.comment %></td>
-        <% if signed_in? %>
-          <td> ~<%= current_user.email %></td>
-        <% end %>
+          <td> ~<%= comment.user.email %></td>
+
 
         <% if user_signed_in? %>
         <td><%= link_to 'Edit', edit_blog_comment_path(@blog, comment) %></td>
