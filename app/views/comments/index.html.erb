@@ -8,6 +8,7 @@
 
 <h1>Comments</h1>
 
+<% if @comments.any? %>
 <table>
   <thead>
     <tr>
@@ -33,5 +34,9 @@
 </table>
 
 <br>
+  <% else %>
+  <h4>No comments yet</h4>
+    <p>Be the first to comment on this blog</p>
+<% end %>
 
 <%= link_to 'New Comment', new_blog_comment_path %>
