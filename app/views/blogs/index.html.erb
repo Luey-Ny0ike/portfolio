@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Blogs</h1>
-
+<% if @blogs.any? %>
 <table>
   <thead>
     <tr>
@@ -27,6 +27,9 @@
 </table>
 
 <br>
+<% else %>
+  <h3>Blog posts coming soon</h3>
+<% end %>
 <% if admin_signed_in? %>
   <%= link_to 'New Blog', new_blog_path %>
 <% end %>
