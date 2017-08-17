@@ -18,13 +18,16 @@ class CommentsController < ApplicationController
   end
 
   def new
+
     @blog = Blog.find(params[:blog_id])
     @comment = @blog.comments.new
+    @comment.user_id = current_user.id
   end
 
   def create
     @blog = Blog.find(params[:blog_id])
     @comment = @blog.comments.new(comment_params)
+    @comment.user_id = current_user.id
     if @comment.save
        flash[:notice] = "Comment added successfully"
       redirect_to blog_comment_path(@comment.blog)

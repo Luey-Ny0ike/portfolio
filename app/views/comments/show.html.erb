@@ -3,6 +3,7 @@
 <p>
   <strong>Comment:</strong>
   <%= @comment.comment %>
+  <%= current_user.comments %>
 </p>
 
 <%= link_to 'Edit', edit_blog_comment_path(@blog.comments) %> |
