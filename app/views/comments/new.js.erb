@@ -1,2 +1,2 @@
 $('#new_comment_link').hide().after('<%= j render "form", comment: @comment %>')
-$('<%= link_to 'Back', blog_comments_path, id: "back" %>').insertAfter('#comment_form')
+$('<%= link_to 'Back', blog_comments_path, id: "back" %>').insertAfter('#new_comment')
