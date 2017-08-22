@@ -1,15 +1,5 @@
-<% @blog.comments.each do |comment| %>
-<tbody>
-<tr>
-    <td><%= comment.comment %></td>
-    <td>
-      ~<%= comment.user.email %></td>
 
-
-  <% if user_signed_in? %>
-  <td><%= link_to 'Edit', edit_blog_comment_path(@blog, comment) %></td>
-  <td><%= link_to 'Destroy', blog_comment_path(@blog, comment), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  <% end %>
-</tr>
-<% end %>
-</tbody>
+<td><%= comment.comment %></td>
+<td> ~<%= comment.user.email %></td>
+<td><%= link_to 'Edit', edit_blog_comment_path(@blog, comment) %></td>
+<td><%= link_to 'Destroy', blog_comment_path(@blog, comment), method: :delete, data: { confirm: 'Are you sure?' } %></td>
