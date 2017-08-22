@@ -39,4 +39,4 @@
     <p>Be the first to comment on this blog</p>
 <% end %>
 
-<%= link_to 'New Comment', new_blog_comment_path %>
+<%= link_to 'New Comment', new_blog_comment_path, remote: true, id: 'new_comment_link' %>
