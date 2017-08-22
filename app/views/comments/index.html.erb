@@ -1,13 +1,12 @@
 <% if user_signed_in? %>
-  <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
-  <% else %>
-    <%= link_to 'Signup', new_user_session_path %>
-    <%= link_to 'Login', user_session_path %>
+<%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+<% else %>
+<%= link_to 'Signup', new_user_session_path %>
+<%= link_to 'Login', user_session_path %>
 <% end %>
 <p id="notice"><%= notice %></p>
 
 <h1>Comments</h1>
-
 
 <% if @comments.any? %>
 
@@ -20,27 +19,27 @@
   </thead>
 
   <tbody>
-      <% @blog.comments.each do |comment| %>
-        <tr>
+    <% @blog.comments.each do |comment| %>
+    <tr>
+      <td><%= comment.comment %></td>
+      <td>
+        ~<%= comment.user.email %></td>
 
-          <td><%= comment.comment %></td>
-            <td> ~<%= comment.user.email %></td>
-
-          <% if user_signed_in? %>
-          <td><%= link_to 'Edit', edit_blog_comment_path(@blog, comment) %></td>
-          <td><%= link_to 'Destroy', blog_comment_path(@blog, comment), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <% end %>
+      <% if user_signed_in? %>
+      <td><%= link_to 'Edit', edit_blog_comment_path(@blog, comment) %></td>
+      <td><%= link_to 'Destroy', blog_comment_path(@blog, comment), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
       <% end %>
     </div>
-    </tr>
-  </tbody>
+  </tr>
+</tbody>
 </table>
 <div class="macomments"></div>
 
 <br>
-  <% else %>
-  <h4>No comments yet</h4>
-    <p>Be the first to comment on this blog</p>
+<% else %>
+<h4>No comments yet</h4>
+<p>Be the first to comment on this blog</p>
 <% end %>
 
 <%= link_to 'New Comment', new_blog_comment_path, remote: true, id: 'new_comment_link' %><br>
