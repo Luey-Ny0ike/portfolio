@@ -8,7 +8,9 @@
 
 <h1>Comments</h1>
 
+
 <% if @comments.any? %>
+
 <table>
   <thead>
     <tr>
@@ -18,22 +20,22 @@
   </thead>
 
   <tbody>
-    <% @comments.each do |comment| %>
-      <tr>
-      <div class="macomments">
-        <td><%= comment.comment %></td>
-          <td> ~<%= comment.user.email %></td>
-      </div>
+      <% @blog.comments.each do |comment| %>
+        <tr>
 
+          <td><%= comment.comment %></td>
+            <td> ~<%= comment.user.email %></td>
 
-        <% if user_signed_in? %>
-        <td><%= link_to 'Edit', edit_blog_comment_path(@blog, comment) %></td>
-        <td><%= link_to 'Destroy', blog_comment_path(@blog, comment), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-    <% end %>
+          <% if user_signed_in? %>
+          <td><%= link_to 'Edit', edit_blog_comment_path(@blog, comment) %></td>
+          <td><%= link_to 'Destroy', blog_comment_path(@blog, comment), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+      <% end %>
+    </div>
+    </tr>
   </tbody>
 </table>
+<div class="macomments"></div>
 
 <br>
   <% else %>
@@ -41,4 +43,4 @@
     <p>Be the first to comment on this blog</p>
 <% end %>
 
-<%= link_to 'New Comment', new_blog_comment_path, remote: true, id: 'new_comment_link' %>
+<%= link_to 'New Comment', new_blog_comment_path, remote: true, id: 'new_comment_link' %><br>
