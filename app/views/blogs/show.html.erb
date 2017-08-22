@@ -9,7 +9,10 @@
   <strong>Blog:</strong>
   <%= @blog.blog %>
 </p>
-<%= link_to 'Show all comments', blog_comments_path(@blog) %>
+<% if @blog.comments.any? %>
+  <%= render @blog.comments %>
+<% end %>
+
 <% if admin_signed_in? %>
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>
