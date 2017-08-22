@@ -20,8 +20,10 @@
   <tbody>
     <% @comments.each do |comment| %>
       <tr>
+      <div class="macomments">
         <td><%= comment.comment %></td>
           <td> ~<%= comment.user.email %></td>
+      </div>
 
 
         <% if user_signed_in? %>
