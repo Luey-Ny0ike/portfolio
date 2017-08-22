@@ -28,12 +28,13 @@ class CommentsController < ApplicationController
     @blog = Blog.find(params[:blog_id])
     @comment = @blog.comments.new(comment_params)
     @comment.user_id = current_user.id
-    if @comment.save
-       flash[:notice] = "Comment added successfully"
-      redirect_to blog_comment_path(@comment.blog)
-    else
-      flash[:alert] = "Comment was not added"
-      render :new
+    respond_to do | format |
+      if @comment.save
+        format.html { redirect_to blog_comments_path, notice: 'comment successfully added' }
+        format.js
+      else
+        format.html { render :new }
+      end
     end
   end
 
