@@ -1,4 +1,3 @@
 $('#new_comment').remove();
 $('#new_comment_link').show();
 $('.macomments').append( '<tr><%= j render @comment %></tr>' )
-$('<%= link_to 'Back', blog_comments_path, id: "back" %>').remove()
