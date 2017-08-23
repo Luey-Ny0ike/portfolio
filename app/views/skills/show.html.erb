@@ -1,6 +1,9 @@
 <h3><%= @skill.name%></h3>
 <p><%= @skill.description%></p>
-
+<p><%= @skill.id%></p>
+<form>
+  <input type="button" value="<%= @skill.name %>">
+</form>
 <% if @skill.projects.any? %>
   <h4>Here are the projects for this skill:</h4>
 
