@@ -14,10 +14,3 @@
 //= require turbolinks
 //= require_tree .
 //= require jquery
-
-$(document).ready(function(){
-  $('#descriptionShow').click(function(){
-       event.preventDefault()
-      $('.description').show(1000);
-});
-});
