@@ -47,22 +47,17 @@
 </div>
 
 <div class="container-fluid">
-  <div class="skills">
+  <div class="row skills">
     <h2>Skills</h2>
     <% if @skills.any?%>
-    <ul>
-      <% @skills.each do |skill| %>
-        <button type="button" class="btn btn-info" id='descriptionShow'><%= skill.name %></li></button>
-    <div class="row description">
-      <div class="col-md-4">
-        <li><%= skill.description %>
-      </div>
-    </div>
+        <% @skills.each do |skill| %>
+        <div class="col-md-4 skilll">
+        <button class="show_skill" type="button" value="<%= skill.name %>" id="<%= skill.description %>"><%= skill.name %></button>
+        </div>
+
     <% end %>
-  </ul>
   <% else %>
   <p>No skills yet</p>
   <% end %>
   </div>
 </div>
-<h1>Skills you have</h1>
