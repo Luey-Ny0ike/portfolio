@@ -1,6 +1,5 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_admin!, except: [:index, :show]
 
   # GET /blogs
   # GET /blogs.json
@@ -15,7 +14,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs/new
   def new
-    @blog = current_admin.blogs.build
+    @blog = Blog.new
   end
 
   # GET /blogs/1/edit
@@ -25,7 +24,7 @@ class BlogsController < ApplicationController
   # POST /blogs
   # POST /blogs.json
   def create
-    @blog = @blog = current_admin.blogs.build(blog_params)
+   @blog = Blog.new(blog_params)
 
     respond_to do |format|
       if @blog.save
