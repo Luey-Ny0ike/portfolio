@@ -15,8 +15,10 @@
         <td><%= blog.title %></td>
         <td><%= blog.blog %></td>
         <td><%= link_to 'Show', blog %></td>
+        <% if can? :manage, User %>
         <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
         <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -26,5 +28,6 @@
 <% else %>
   <h3>Blog posts coming soon</h3>
 <% end %>
-
+<% if can? :manage, User %>
   <%= link_to 'New Blog', new_blog_path %>
+<% end %>
