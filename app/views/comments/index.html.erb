@@ -41,5 +41,9 @@
 <h4>No comments yet</h4>
 <p>Be the first to comment on this blog</p>
 <% end %>
-
+<% if user_signed_in? %>
 <%= link_to 'New Comment', new_blog_comment_path, remote: true, id: 'new_comment_link' %><br>
+
+<% else %>
+  <%= link_to 'New Comment', new_blog_comment_path %>
+  <% end %>
