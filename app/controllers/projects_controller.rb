@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  load_and_authorize_resource
+  skip_authorize_resource :only => [:index, :show]
   def new
     @skill = Skill.find(params[:skill_id])
     @project = @skill.projects.new

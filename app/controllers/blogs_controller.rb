@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
-  before_action:load_and_authorize_resource, except: [:index, :show]
+ load_and_authorize_resource
+ skip_authorize_resource :only => [:index, :show]
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
   # GET /blogs
