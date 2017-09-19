@@ -16,13 +16,48 @@
 //= require jquery
 
 $( document ).ready(function() {
-  $('.show_skill').click(function(){
+  $('.button1').click(function(){
     event.preventDefault()
-    $(this).after('<button class="kill">' +this.value+'</button>'+'<h3 well">'+this.id+'</h3>').toggle()
+    $('.description1').toggle(500)
   });
-  $('.kill').click(function(){
+  $('.button2').click(function(){
     event.preventDefault()
-    $('.kill').hide(1000);
-    $('.well').hide(1000);
-  })
+    $('.description2').toggle(500)
+  });
+  $('.button3').click(function(){
+    event.preventDefault()
+    $('.description3').toggle(500)
+  });
+  $('.button4').click(function(){
+    event.preventDefault()
+    $('.description4').toggle(500)
+  });
+  $('.button5').click(function(){
+    event.preventDefault()
+    $('.description5').toggle(500)
+  });
+  $('.button6').click(function(){
+    event.preventDefault()
+    $('.description6').toggle(500)
+  });
+  $('.button7').click(function(){
+    event.preventDefault()
+    $('.description7').toggle(500)
+  });
+  $('.button8').click(function(){
+    event.preventDefault()
+    $('.description8').toggle(500)
+  });
+  $('.button9').click(function(){
+    event.preventDefault()
+    $('.description9').toggle(500)
+  });
+  $('.button10').click(function(){
+    event.preventDefault()
+    $('.description10').toggle(500)
+  });
+  $('.button11').click(function(){
+    event.preventDefault()
+    $('.description11').toggle(500)
+  });
 });

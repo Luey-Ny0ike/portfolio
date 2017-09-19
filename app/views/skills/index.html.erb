@@ -1,80 +1,542 @@
 <div class="container-fluid fill">
   <nav class="navbar navbar-default navbar-fixed-top">
-<div class="container">
-<a class="navbar-brand" href="#">
-    <p class="brand"><strong>LN</strong></p>
-  </a>
-  <div id="navbar5" class="navbar-collapse collapse">
-    <ul class="nav navbar-nav navbar-left">
-      <li><a href="#"><em>| Lewis Nyoike</em></a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">About</a></li>
-      <li><a href="#">Skills</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="/blogs" target="_blank">Blog</a></li>
-    </ul>
-  </div>
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <p class="brand">
+          <strong>LN</strong>
+        </p>
+      </a>
+      <div id="navbar5" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+          <li>
+            <a href="#">
+              <em>| Lewis Nyoike</em>
+            </a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Skills</a>
+          </li>
+          <li>
+            <a href="#">Projects</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+          <li>
+            <a href="/blogs" target="_blank">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="start">
 </div>
-</nav>
-  <img src="https://images.pexels.com/photos/116021/pexels-photo-116021.jpeg?h=350&auto=compress&cs=tinysrgb" alt="">
-
 </div>
 
 <div class="container about">
   <h2>About</h2>
-  <p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be?<br>
-    He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when...
-    <br>You know why, David? Because of the kids. They called me Mr Glass.</p>
-  <p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be?<br>
-    He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when...
-    <br>You know why, David? Because of the kids. They called me Mr Glass.</p>
-  <p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be?<br>
-    He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when...
-    <br>You know why, David? Because of the kids. They called me Mr Glass.</p>
-  <p>Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be?<br>
-    He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when...
-    <br>You know why, David? Because of the kids. They called me Mr Glass.</p>
+  <div class="well">
+    <p>My name is Lewis Nyoike. I am full stack web developer and mainy specialise in ruby on rails. I have also worked
+    with other programing lanuages like JavaScript and HTML with CSS. I also have experience in multiple javascript frameworks
+   like Ember js and a bit of Angular js as well</p>
+    <p>I am both self taught and have also gone through a coding bootcamp called Moringa school where I got to up my coding skills to a professional level
+    </p>
+    <p>I'm a cool person and love to interact as well. I have little to no stage fright! Yes I'm that cool
+    I'm a good public speaker as well. <em>PS:I would choose DC over Marvel in a heart beat</em></p><br><br><br>
+  </div>
 </div>
 
 <div class="container-fluid quote">
-<div class="parallax">
-  <p>Cupcakes are Muffins that </p>
-  <p>beleived in miracles</p>
-  <p>~Luey</p>
-</div>
-</div>
-
-<div class="container-fluid">
-  <div class="row skills">
-    <h2>Skills</h2>
-    <% if @skills.any?%>
-        <% @skills.each do |skill| %>
-        <div class="col-md-4 skilll">
-        <button class="show_skill" type="button" value="<%= skill.name %>" id="<%= skill.description %>"><%= skill.name %></button>
-        </div>
-
-    <% end %>
-  <% else %>
-  <h3>No skills yet</h3>
-  <% end %>
+  <div class="parallax">
+    <p>Cupcakes are Muffins that
+    </p>
+    <p>beleived in miracles</p>
+    <p>~Luey</p>
   </div>
 </div>
-
-<div class="projects">
-  <h2>Projects</h2>
-
-
+<div id="headline">
+  <h1>
+    <strong>Skills</strong>
+  </h1>
 </div>
-
-<div class="contact">
-  <h3>Contact me</h3>
+<div class="container skills">
   <div class="row">
-    <div class="col-md-4">
-      <%= image_tag("lewis.JPG", :class => "img-thumbnail", :width =>"304", :height => "236")%>
-      <br><h4>Lewis Nyoike</h4><br>
-      <h4>Full stack developer</h4>
+    <div class="col-md-6">
+      <div id="lewis"><br>
+        <img
+          class="icon icons8-Active-Directory"
+          width="64"
+          height="64"
+          src="data:image/png;base64,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">
+        <h3>Languages and frameworks</h3>
+      </div><hr>
+      <button id="button" class="btn button3"><img class="icon icons8-Ruby-Programming-Language" width="64" height="64" src="data:image/png;base64,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">
+      <br>Ruby</button>
+      <div class="description3">
+        <div class="row">
+          <div class="col-md-9">
+            <h5><strong><em>RUBY</em></strong></h5>
+            <hr>
+            <h5>Ruby! more specific, ruby with sinatra the language that I am most proficient in and the one I love most!(<em>It may change given time, programming is just that interesting</em>)
+            I have built my best achivements yet with Ruby. Its capabilites is just beyond imagination</h5>
+          </div>
+        </div>
+      </div><br><br>
+      <button id="button" class="btn button4"><img class="icon icons8-Switch-Tracks-Filled" width="50" height="50" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADCElEQVRoQ+1a7TVEMRC92wEd0AEdUAEqQAWoABWgAlSAClABKkAHVMC5e15WNmcymeQl7+2eI7+w+ZibmXtnMmuCv/Hj/cwfJ8Hv0q8la/x9StaLa3xjq21quABOWQPw7s39BrBiWKsCCT90HpH+njor5cnYns8AzgA8pg4QPp+4QxcByBWADwAXyw5kD8AugP1lBkJ+OM5YeBJinYUWPxiS7C8ANjxrbgEcGDxBcSBgN7YBPIUSOxSQY4EH6x0/NCwEzgvwx0xYhiK7pn70xk2hWs2cMTYQcoM3fQ1gyxBa0pQphrGBnHSWlUiuAzU6kAcA5AvjvkSpRCAtVYtqxNDxx1sXSl+GcLoEcOTNc1I9t7Z1rSWBEA2JACJvwpLlvCtlRPmqXaLEVIogaBwB+rdscIwsu3PxJSRDJwSlRaO0zoFwKpVrvJg/WgJhTgizdE0QYSKfYmkhv+FN1wahAqmlWjEQr8Y4ksThs0uaqsLVVi3fXhrAsrwPCOfN5B6tQsvlCWZsS1WrOSz14mzGkZogRD5IqGt7hJUs3919isDQzlE8wkPDR5OR59FpWUCsqsVkxpIhVuRZDuVa7uG/EHm+mdhaaFmApEBY4pl73AXPVa4jr6hw7KIUjdoc4X4lZY3lElSAfYAcCuX50gFhM401ldQMWBqPUGL52JFIP7pHJLKzZxQ+akhKX220FhL7T9Iz1trDyiK9VmtRQfxmmFS8xYDEJLYJiFQZH94IPcTX3alyVZbQsuSaLG/kACG57w1NtIUG4kKK8e6HmnRrEq+Kaqdcl2h5xO3FfEEAWki5uSGvUtVErr2mgkzSf3pD80IqZ8y65dUsjmykqRaXsKXJnBEbGhDyip3EQUYqtFa7XJDiRmhsThOuClANCL+cdL3Z3MPEbmDuJjnzNSA0hsNCcv/Mwb2RyiMkKj2yk3MzAJplb80OjeyWr8Mksm9mtIAy7yg+vXZfKyXX1QwPN+rzsIoZ1aSWSt3APxDlhv49kgqfUtWy3GzJPxn0sTe6trZqWcA3AfILwqLZM3m7L0QAAAAASUVORK5CYII=">
+      <br>Rails</button>
+      <div class="description4">
+        <div class="row">
+          <div class="col-md-9">
+            <h5><strong>Rails</strong></h5>
+            <hr>
+            <h5>Rails is sinatra on steroids! Easier to use backed up with amaizing gems! What more could you ask?
+            <br>Rails is my best framework! Its capabilites and eaze to use helps achive more better and faster</h5>
+          </div>
+        </div>
+      </div><br><br>
+      <button id="button" class="btn button5"><img class="icon icons8-JavaScript" width="50" height="50" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACSklEQVRoQ+2ajTEEQRCF30WACBABIkAEZIAIkAERIAJkQATIgAgQASKgPjVd1Tc1t3s/NXV9VzNV6qp2t3f79Xvd0zNjoCUZgyXBoQYkGpMlRlYlXUk6juZs8udO0rmkb+9fCQgPHgUFYW7d54EuAflNT6/lqAOAQy1fyY8h37uARC0EFugGJICy/l1ojERhwvxojDRGKkWgSatSYKd+bWNk6tBVMmyMVArs1K9tjEwdukqGc2HEPmqYSmucPUmnkvhl4cQS9lkSq8CHQjBCArnt2Rtg2X2SgQkH5CxtcvQp8FLShXsoHJB3SRvOQaSEpLaT1Lj1KQnAXmLhgPj8eUsADBfOAxImhrZ95rVC7Ep2f+9V0k6fxtL9cIwQ6RXnPNEnH/pGOCDXLhfMecBx/aZjTy0cEOYMJLVeoKALUDgg+A8YKtLuCD0BlHmEXxshgZhzzOpIamsEO5tOaqGBeEAkfc4QOUNJZiwEED+PcLRh4yX1YlWBoHOavp8kD/u43zm3a75p5D69Vl9zmNtWYeQw9UvWaiALZMDID4sAivMM7ABh3e5+ltDkzJNjxNtWAULFORhRcfLL/nCmZEeyU3YBx2mZgeY9jwl8NWnxMRq9UrXJgRB1nmVg95HN7F3xoH2xElyFEXOqDwxzAWsLP8YJApKiWnnbakDMOeTAH/nCbE0LThSRjDFRijo25Ax2xizdMDbYwpwf1YGMmSozPzYxkIU/DF2a42mSEG1GPWunjFMAev9hYGYRz+MFUc/SJ45FAzJxyCob/AETk7IzmLcKMwAAAABJRU5ErkJggg==">
+      <br>JavaScript</button>
+      <div class="description5">
+        <div class="row">
+          <div class="col-md-9">
+            <h5><strong><em>Javascript</em></strong></h5>
+            <hr>
+            <h5>Javascript is one amaizingly powerful language! With its multiple languages you can achive just about anything, from back-end to front-end
+            .My experience in JavaScript is slightly above average. I shall still deliver quality work in Js</h5>
+          </div>
+        </div>
+      </div><br><br>
+      <button id="button" class="btn button6"><img class="icon icons8-TripAdvisor" width="50" height="50" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADkUlEQVRoQ+2ZgZENQRCG/4sAESACZEAEiAARIAJEgAgQwREBGSACZEAE1PfMv9VvzHu7szPzSl1tV13d7XszPf33/3fPzN6ZLoidXRAc2oD8b0xujGyMDMrAJq1BiV3tdmNkdeoGTezFyGVJNyTdlnRTEs8Yz9E+pYefkr5I4vmrJJ6brAUIAT+QdE/StaYopO+S3kt6rb9/V9saIAT/JGXeC/4KGSbTznieaZgyY/w2g5dC5Mx/JeldDZoaIAB4HrL/I2XxbQJRs24+FlAPE7tX05cww3qLAEUgBESwNcZi1vqHFbJAkncDM7USBSQJ2Dv9QjuBRZprQDGWZLxYAIiAnzmI2kXSeOSMn518c2mB7s0Bx6Cny8AAPxiS4IeCJ7MYjh8l2ZVcMZY13NmW+s19sQaJ21mpRmDFOmUMkqG457oJ2aFIDWhvobReTNRav7iiPvdkWAJCgUE79jQFV8M+oF+mCfcDMzBx3skv8iXOyXIg0P0t0b4GhB0bDDK7lT783Nnv9biR5kDcuaCdDOaW7yHHej4bHDJz+2Rub7+7jpXXCJqDDQy0sSZg6mO2CUaQALqTHTWiP4/t7XfyFxmxHKbeHCJFFnQnioxxsWtR4DQHPrOMPNWs8DzC7yT/CMSL5t3GAAEBmNKxAxCAyefGLjXC7yTVCARZIQey6oyTSbPhDsT5yHsNwbG3uCPlrACc+dgIv8gfee3tI78LdcNH/vxKYsOA+c6OYj3kDeQkfuOiSxdEWj7GeGPqAaTJbwSCLLgc5RLw51FaPhpQA1FaXJKQk+2YtHr4ndarKXZkBMhSsVMHsLKm2Fv8Fov9WPt19liUcWQCg0HaLyByNvh+rv22+i2237kNEQkReMkAQTeLbC3dEFv8FjdEAvQRhUxSE7lREzBiQACAkek4HSZwQMyPOT397m2weaski9BNV+pxaCyx18MvlyoayXSMKh3j43Gb7PNmo8YeLzj6t/qN14NdbIdePsSjBXIgi0suVtxDLCfm4CfKEAn6rrLWb+nCdvQ/VgTEwt78WJgf6iIeGgmUsQYA7QBgLPT7pRzNgHl8R121+P1HIXOvg6gZbmJL365QgMgmdi/fGWJD4FoAmBq/xHFQFXNAjBxAZJys8neUi98SwkDtq08Amc2SX9jE75yst3+G1nSxk4xdKq2TBNOyyAakJXsj5m6MjMhqi8+NkZbsjZi7MTIiqy0+/wD8xDhC8BJY0AAAAABJRU5ErkJggg==">
+      <br>Ember</button>
+      <div class="description6">
+        <div class="row">
+          <div class="col-md-9">
+            <h5><strong>Ember js</strong></h5>
+            <hr>
+            <h5>Ember js is the very first JavaScript framework that I ever used. It helped me grow as a developer and I just love it. My experience in ember is
+            above average and I surpass expectations</h5>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <button id="button" class="btn button1">
+        <em><img
+          class="icon icons8-Source-Code"
+          width="36"
+          height="36"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAEAElEQVRoQ+1XTYgbZRh+nqSlsM3EhQoiKsyC2F7E7U3BbZOTyq44iwXbk7t4WDuhWE960JMe9GRFMnUP0vRkhcqO2NXekm0L9WbFSxVhB2wRoYWaSRekzb4yWZOZZOfny052l0DmmLzf9z7P+z7vz0cM+cchx48Rgd3O4CgDowykjMBIQikDmPr4jmVAX6wfQpPfArj4sMmLt07lfk2NHti5OTBhuR8B+KANWkQqTik/n5bEzmXAqt8keNAnwHmnlKsMBQG93Jgk5ecA2AfuvtyBO2/RHQ4CVuMTQt7zo4/vnJJmpAXvne9bQlPG8lwGOLpiT6vpV4QTlvs7yKc7BIgTzkntQi+BI8alioC1q/a0srT6ItACT5xrORapEftna3bxXlwkdWvteaJ53bcR192nPRGUT8GojgvuL4EseHbrgnlVEsoEXjS+L2SZqQbBCrByZWm65TTq08vuGRLvdKIPfOOY2vGg/ZHZ5RqBo8HfmrJevGa/WkuSmRKBgrE8KZAqyPHAhf9QUKjZ0zcinbTk0/gLxGM+AZl1zLwdPNO6n/DAPtL5XeQewWLs/So1sGXwAPSzboGCQNbEXc1qB7DAB72kt0oiNgMb2lyrgpgMOqTgcFJkPHu97H5JYiFOPsF7p4wfjAxlqYuc4AYxVoyqtUgCUeCVC2xR9k48bPyZJJ/eTHQ1Cp95JIlIAmGFpQy+Ff3Gy6T8GOw+UfLZTOLS6Qz5WXcmpLZizxR7bUMJeP2Y5JtB43WRd6/aM2eSukL7/83ykfOOmZ9TPR+GAYJK7/zZRCDsoIicv2LPKDtHmHyErzil3GVVAp6dCgklAmHM43t/j3wEf6/uyT0V1n3i7lEJ5rZISLfqFcKXoAgWnZL2dtrohylh8EXsyafp3gWodZoIUXROaolTtW0/ZWwu4qipH99Geb8G8LnuYo7fU3SrbhD0e7knHzP3OEhRyUBoG4X8QtlfCJsFyYMshETcINMt9wKBNzrRF3zulLTTauBDBlkMeO/OxF2onxH/6Feiaf+6t7vkg+wLjjn2UxKBra4siQQ8x6ok9LPucQq+9hcyNflsFbxSBtpgVNZpvezaJF7rVz7bvk773cF/0HhdISNjRruwNuTTuAtgr7/CqMqnOr7ONbv9JuhnZVGSUPfGuDxHSKF3MuvlxhwpG6817xP5Y9XUnlHtPu3Ju61Pytjpa7mXCbzkR5+fOmbu/aTiTft/3xkIcxgqH+Fhp5SLfq2lRf7/+YEQ6JWPQH5zzPyhAWGMvWZABOrnSAa31Y9XTe3DoSHgAX3yi8aze7JyDMAxZOV1ZyF/c6gI7ATYMB8DkdBuge9rEu8myDjfowzsdmZGGRhlIGUEhl5C/wGerxlP2EtGyAAAAABJRU5ErkJggg==">
+          <br>HTML5</em>
+      </button>
+      <div class="description1">
+        <div class="container row">
+          <div class="col-md-5">
+            <h5>
+              <strong>HTML5</strong>
+            </h5>
+            <hr>
+            <h5>My very first language and the most basic. I'm more than just skilled in HTML5. I have more than enough experience and can deliver past required starndards and beyond</h5>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <button id="button" class="btn button2"><img class="icon icons8-CSS" width="26" height="26" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAABWElEQVRIS+2W8TEDQRTGf6lAOkAFqAAdUIGkAlEBKkAFqIASqEBSAakgVMD8Mu+NdZkzJ3GZ/JGd2bm9vbff9763+/Zeh+/WA06B3WJukeEQuAbuBekE0h1wsgjqL2vF7kukktuWSBJ2SqTEnZaJhhJ9tkwyhV8TzR3llQndcyFhP8Zj4C3GOeertu+R8JtV6XWKPoAj4Ak4iBQQ3O7NYXdsagh6GOOt+DaTl3VEZ8Aj8AJ0C+8uATP9teKxODpVKvxhUke0F4rOK4CCHYfXFwVwKhoA9o2moduOq6lK5HpDJomXZalCpSo2rA9NifoB4h6U3rl3+V46k/M34cSkKZFeGyKJysOgEvfO5glzDyVRhXYqNHRXTYnSzoU2D4RggkvuU+A8KDmXdjOJvTIJO/eV89fQrYlqI7CsX/loqcWJctsst7yqelnXSWbZZVb/V0U0igJSEXwBt7dXaKpOkhIAAAAASUVORK5CYII=">
+      <br>CSS3</button>
+      <div class="description2">
+        <div class="row">
+          <div class="col-md-9">
+            <h5>
+              <strong>CSS3</strong>
+            </h5>
+            <hr>
+            <h5>My fair share of expererience and expertese in css is way beyond average. I will always deliver a killer punch when it comes to styling my websites! And to walk the walk, Just checkout any of my past projects</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6"><br>
+      <div id="nyoike">
+        <img
+          class="icon icons8-Maintenance"
+          width="64"
+          height="64"
+          src="data:image/png;base64,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">
+        <h3>
+          <em>Tools & Opperating systems</em>
+        </h3>
+      </div><hr>
+      <button id="button" class="btn button7">
+        <em><img
+          class="icon icons8-Linux"
+          width="26"
+          height="26"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAACFklEQVRIS63WgZFNQRAF0LsRIAJEgAgQARksESACRIAMiAARWBEgAyJABNRhWs17/8+bt7W66tV//29P37m37/TsSfbHzSSPkvj8keQsyav2Pq1yMs34m6D4hySXu/z3Sa4lubMHbC/Qy8am3xdWgN8keTDb8F4gMt1O8jPJpSTfGguMfiW58j+BnjWZ7J5c4nMDnm54mtAKYvS1scDoejMDQEyndaYJDehd+7zR+qI3fgPot1uN3VDBvUDkIt3VVulj1yus/I1hLgykCAYKVvMfJ/F8aq7D7kJAZNJ0DnOefNczgY3zJZ5ssdojHSYKj6SxCX1yrvSKaQ5iBkSaF5NmV47iNnT3vEAksjuPYiXXuk7lsb14mOT1OmmLkWQ98ByVoytG1tM2OZjlwBgjoDIAFtM51pmC7R3gA1YjIFKxMpA6rFvutbHvSQrIZL/fLxgBYcLKkke9WQOT7EtzIMCah3/ythjVmGHfPaGPDGHCWzNlVJdcOQgjZ2QU8t+2e+lpErI5xG7ff9EzcvLvNSt7F3ZpIQeOmNV04Lxah81Crf5LXW7rnduZhZ5jYP0Y6tcunLcHyOLnzRRrY+gjh5LsWFjHvQt6I0byMDFa+l5hWD05F1ANx1HTTWfF2VgvPP530EeHtA82X4yttRkcUC6ie82uKkAGUvWsvAPvgfQUyCK2Zh2wAibrweJWqW5YX+uCPFDlN2xaehv1Lay5AAAAAElFTkSuQmCC"><br>Linux</em>
+      </button>
+      <div class="description7">
+        <div class="row">
+          <div class="col-md-9">
+            <h5><strong>Linux</strong></h5>
+            <hr>
+            <h5>My preffered OS is Linux. More specifically Ubuntu. I am however not shy to use and switch to other Operating Systems. I have little experience in both Windows Os and Mac os as well</h5>
+          </div>
+        </div>
+      </div>
+      <br><br>
+      <button id="button" class="btn button8"><img
+        class="icon icons8-Git"
+        width="36"
+        height="36"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACqUlEQVRoQ+2XbW7TQBCGZ1JUCcWA+YdEY8oN4AZwg+0JaE6AOEHTG/QGMSfoHoEj9AYUR0j8S0QdISHKVOvU1Fi73tmvVJXin8lq/D7zzsca4YE/+MD1ww7gvh3cOWByYC2KEwI4Vv8jQDmW1WkKt5I4UIvJHBAb8f8eojKTi2lsiOgAWvGt6gQQUQEGxSeCiAbwS7w4/IP7FwjwzFomEZ2IAqDEP5Y/Lmvx8g3h3pdtQgQDqLIhQIFw/T6T3y+2DREE0K15IljdB4Q3gK5huxCqrK5hLyfAHGD0DhFOjL0R0BNeAEPTRkE8gt9vVU90BV+JYpYCwhmAMyrH9PM5ytWqC9A4gvtfByeUhxNOABzxSqAOQP1eHxUUe8SyAbjiG4EEnzJZnfUdSLEnWABO4m9VI8GsvcCl3BNWAB/xbeaz86qJfyWKZaoROwgQIl4JbwFU7afaE0aAUPF9gKY1Ossu1p7QAlhntnWUbA50Hbi7jPrtCSI4fSKrWf/VJoAlIuRMncZjOgDTmLXuCYLLTFavWQD1UaG26KttApDI8zU+XQ6881t2Xh2yAFKW0GZP0DSTi7IrphaTY0CcmwCcSqjZmmJSAuKHEBdMJaSaeQQ0HcuFVPHXYiL+As6NZUv0OZOL/7+x230zJDAUwgTglJQB8SoOZ5F5OxEMYBHPAvAtp27N1uLgDHD0MWbm21hWB9qDLuWkazinwcDIvDOAixO66zRjTG40OYhnl1Bv3Fl7whvAUbwXAMsJjznvmnmvEuI6EXPO2xqf3cS6QC6NbRTiUTbdWEEArHIaSmGgeO8e6GvyciKC+GgAzk5EEh8VgA0RUXx0ACtEZPFJAIwQCcQnA1CBb+8+zR2eCErd96xtxnP+Dx6jnJekPLMDSJldTuydA5wspTxzA7FD8EClpBh3AAAAAElFTkSuQmCC">
+        <br>
+        <em>
+          <strong>Git</strong>
+        </em>
+      </button>
+      <div class="description8">
+        <div class="row">
+          <div class="col-md-9">
+            <h5><strong>Git</strong></h5>
+            <hr>
+            <h5>I use git as my version control for tracking changes in my code. I have experience in git workflow and I have even worked as the scram master of the groups in application development</h5>
+          </div>
+        </div>
+      </div><br><br>
+      <button id="button" class="btn button9"><img class="icon icons8-GitHub" width="64" height="64" src="data:image/png;base64,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">
+      <br>Github</button>
+      <div class="description9">
+        <div class="row">
+          <div class="col-md-9">
+            <h5><strong>Github</strong></h5>
+            <hr>
+            <h5>To top on my use of git, I use github to to store my code in their cloud as well as enjoy some of their internet hosting services</h5>
+          </div>
+        </div>
+      </div><br><br>
+      <button id="button" class="btn button10"><strong><em><img class="icon icons8-Heroku" width="48" height="48" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC2UlEQVRoQ+2aMWhTQRjH/5fYGlqhAVE7magg1EGiYEHBVMdOKpTWrTh2s5M6WNo4dRCFDtkMnWygoC5mtOlSodJGh1gE9UUotBgxGSKxtTn5IknzYt7dey/kvUvJm7/L/X/f993d992Foc0/1ub6cfABpm+vBPdKu08Y4yGABZ2JGNc4Zymvp2tyeuGyJppTGAESXyrtrIMxvzPC62bhPOfxdF8QQQgBpsaWXwK44Yr4/UlfReLhm0YaxACjyZ+ueb+qmGuR+NApewBjy9xl75enj8TDho6WpZAQIHiuD7zGIp8tIvf9t5S5P9CLwz2HdHaisS0DmFm4qhOxtPgNbxYzUoAHz67A1+PV2cUiH6Cl8w3HKgUQGjqBWxNndUJJOAEYfcoAkNcn5wbh69WnT/TeGrYyBfUBro8EcG3kpE7o28QmEvNfhGmnRARo4U7MXtQJJa/HZt6j+GtPfYDh8dPoDxzRCU3MfxamTsVYiQhItyaBQQfAyDmic4AOueBAH/zHfPAf91V/olj4Ay2dQyq5Lc19x1Po4+oPkMCBS0f/2yrrnUB2zx+nDQ+vWnvHUshqnhNE9P6atPxQFoCAzZQfjgPQvk55vqUV8DWdqwaG1sPw+BldHSQrI1pajdYuYqpCN95lsb60Ldzb70ydBy3wyucqAFWVG6tZrLzeNHUgkWilAKwu2g5AA4811ZF1IgCUDzJRM9PSXajtI0AdlqyWr4dUaheiBsVMQ1ILoRQAHWR02sYi8q6qAqEcAAmzAqEkgBUIZQHMVpbKAlCH9SL6SbqzKglgVrxytRDtQlbEKwdAd5xm0kbZc0Ca8A0M6Iau9m6U+mLRvahytZAdaNs98cPRZI4xtt//2Zm9yTEcyDyKhw1fR2X9QHs/8v17I95JuRUFznne6+kO2X5mpeiX34r57lMOhBgQaDIjTA2ntGFAysO67jb10G1qNpeNDv5/JVx2sHT6vyJFNk+n2EG1AAAAAElFTkSuQmCC">
+      <br>Heroku</em></strong></button>
+      <div class="description10">
+        <div class="row">
+          <div class="col-md-9">
+            <h5><strong>Heroku</strong></h5>
+            <hr>
+            <h5>I use heroku to deploy most of my web applications especially in ruby or rails. I have experience with firebase as well as I deploy most of my javascript work to firebase instead</h5>
+          </div>
+        </div>
+      </div><br><br>
+      <button id="button" class="btn button11"><strong><img class="icon icons8-Bold" width="50" height="50" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADDUlEQVRoQ+2Z4W0VMRCEJxUQKoBUEKgAqADSAakAqACoAKgAqCB0AFQAqQCoAKgA9Ek2epy8zu7a90BPZ+mU98Nn73h2duecIx3IODoQHNqA/G9MboxsjKx0ApHUuivpzoQ4fkj6LOlSEr+njAiQZ5IelyBGNj+WdFoW+CrpjaS3kvidHlEgsMIzY9wqa3E41yRxUK+yC48AIRBSZMYADEAuJJ1nFswCuVlSYhY7xM7BfJD0soAK4ckCCW0SmPygsHIS1UwWCIy8kHS2CPKpETRCpkp5UpE5MEO6uUcWCBuQVmy4O34ZZbWWbeajgV6FAsAjSbDiHiNAWmIHyL0GwKoBSi0V6nanh3BA76WYoc0CscTeAwIYegipg6B5WmOvQCzKrwLCe7ACIIRtAXlX5qyeWpbYZwChn4Qbbza1emK3NFJT61Pp4FZqfZH0vDC3OiNVvMty2mMEFunc10vzaxlGwJFyzA2NLCM9sQNuGSTzeT5KemiUX0ouTJBWnn7zF9AsEOu0yO/WoG/QQ1r9435pfvQN2AiDYMMsEEvskXSAmdflBVxvqJMvN8oCscQeBULw9duEskxqpb5LRoDMtPGkVAX1JFqxRlOLE1zaeMs0shcnjdh7J17TDT/G+u4xwkhrE8s0Mhdd3Sii7xnHCgY/5hZ+Fki2s5OO9Ap0QZWyLh9gA9A0V9fIAsl29hpUvXSwyjUHRYd3szICJGrjd0/W46dIK5ixrMyUhpi18XVzdACYnhWhgfJYrE0BYuWtx/3yroeRvQDJih0QfItc5YCZtxcgWbHjq2ADbdKDelem3yW5m+MaYm+53wqcv1yP0sV7IOq1EJbfdT+cBWKJved+qwP29AUuH74Vy++Zn3a/rsWTk+r1KeXdbSBHGGld0CVj//PaP/FarQu6LBAqGd8maCNsGEfcbzbg3ffQGZ6L4GGCK1X+uo3i7mLR1OK7OrXRAnm1/z9Lv8CKcJeVHhEg4bumTlQ0u/ovuHTwWUambLjWIhFG1ophyrobkCnHOHGRjZGJhzllqYNh5DepndMzGosn+QAAAABJRU5ErkJggg==">
+      <br>Bootstrap</strong></button>
+      <div class="description11">
+        <div class="row">
+          <div class="col-md-9">
+            <h5><strong>Bootstrap</strong></h5>
+            <hr>
+            <h5>To top of my CSS, I use bootstrap framework for responsiveness and grid systems and many more. I also have my fair share of materialize framework as well as I have built a couple of web apps with materialise as well</h5>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+</div>
+
+<br>
+<div class="container">
+  <div id="headline">
+    <h1>
+      <em>
+        <strong>Projects</strong>
+      </em>
+    </h1>
+  </div>
+  <ul class="nav nav-tabs">
+    <li class="active">
+      <a data-toggle="tab" href="#all">
+        <h4>All</h4>
+      </a>
+    </li>
+    <li>
+      <a data-toggle="tab" href="#rails">
+        <h4>Rails</h4>
+      </a>
+    </li>
+    <li>
+      <a data-toggle="tab" href="#sinatra">
+        <h4>Sinatra</h4>
+      </a>
+    </li>
+    <li>
+      <a data-toggle="tab" href="#js">
+        <h4>Js</h4>
+      </a>
+    </li>
+    <li>
+      <a data-toggle="tab" href="#html">
+        <h4>Html</h4>
+      </a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="all" class="tab-pane fade in active">
+      <h3>All applications</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="info-card">
+            <div id="iphone">
+              <h4>SmartDoggy</h4>
+            </div>
+            <div class="front">
+              <%= image_tag("smartz.jpg", :class => "info-card", :class => "img-responsive")%>
+
+            </div>
+            <div class="back">
+              <h2>Smart Doggy</h2>
+              <p>
+                Smartdoggy is a platform to help users find their perfect puppy a new best friend! Learn more about a puppy, learn tips and tricks to raise the puppy
+                and even read and write testimonials from previous customer.<em>Its not just a puppy, its a new bestfriend!</em>
+                <br><strong>Visit link:<a href="https://smart-doggy.herokuapp.com/" target="_blank">https://smart-doggy.herokuapp.com</a></strong>
+              </p>
+            </div>
+          </div>
+        </div>
+          <div class="col-md-4">
+          <div class="info-card">
+            <div id="iphone">
+              <h4>SmartFarm</h4>
+            </div>
+            <div class="front">
+              <%= image_tag("smartz.jpg", :class => "info-card", :class => "img-responsive")%>
+
+            </div>
+            <div class="back">
+              <h2>Smart farm</h2>
+              <p>
+                Smart farm is an online based library to help farmers learn more about crops in terms of where and when to plant type of soil to use and the like
+                <br>The site majors on crops key in the export market and a search function for all other crops as well
+              </p>
+            </div>
+        </div>
+      </div>
+        <div class="col-md-4">
+          <div class="info-card">
+            <div id="iphone">
+              <h4>School system</h4>
+            </div>
+            <div class="front">
+              <%= image_tag("school.jpg", :class => "info-card", :class => "img-responsive")%>
+            </div>
+            <div class="back">
+              <h2>School system</h2>
+              <p>
+                A virtual school system that helps bring credibale information straight from the school. A parent can log in and track his/her children's progress in
+                terms of grades, assignments clubs and so on. Vist site for live demo(<em>Use credentials username:parenta, password:parenta</em>)
+                <br>Link:<a href="https://school-system254.herokuapp.com/" target="_blank">School system</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="info-card">
+            <div id="iphone">
+              <h4>SmartDoggy(ember version)</h4>
+            </div>
+            <div class="front">
+              <%= image_tag("smartz.jpg", :class => "info-card", :class => "img-responsive")%>
+
+            </div>
+            <div class="back">
+              <h2>Smart Doggy(ember version)</h2>
+              <p>
+                Smartdoggy is a platform to help users find their perfect puppy a new best friend! Learn more about a puppy, learn tips and tricks to raise the puppy
+                and even read and write testimonials from previous customer.<em>Its not just a puppy, its a new bestfriend!</em>
+                <br><strong>Visit link:<a href="https://smartdoggy3317d.firebaseapp.com/" target="_blank">https://smartdoggy3317d.firebaseapp.com/</a></strong>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info-card">
+            <div id="iphone">
+              <h4>Tippy toes</h4>
+            </div>
+            <div class="front">
+              <%= image_tag("tippy.jpg", :class => "info-card", :class => "img-responsive")%>
+            </div>
+            <div class="back">
+              <h2>Tippy toes</h2>
+              <p>
+                A virtual online store that you can add shoe stores and add shoe brands to this shoe stores
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+    <div id="rails" class="tab-pane fade">
+      <h3>Rails</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="info-card">
+            <div id="iphone">
+              <h4>SmartDoggy</h4>
+            </div>
+            <div class="front">
+              <%= image_tag("smartz.jpg", :class => "info-card", :class => "img-responsive")%>
+
+            </div>
+            <div class="back">
+              <h2>Smart Doggy</h2>
+              <p>
+                Smartdoggy is a platform to help users find their perfect puppy a new best friend! Learn more about a puppy, learn tips and tricks to raise the puppy
+                and even read and write testimonials from previous customer.<em>Its not just a puppy, its a new bestfriend!</em>
+                <br><strong>Visit link:<a href="https://smart-doggy.herokuapp.com/" target="_blank">https://smart-doggy.herokuapp.com</a></strong>
+              </p>
+            </div>
+          </div>
+        </div>
+          <div class="col-md-4">
+          <div class="info-card">
+            <div id="iphone">
+              <h4>Portfolio</h4>
+            </div>
+            <div class="front">
+              <%= image_tag("port.JPG", :class => "info-card", :class => "img-responsive")%>
+
+            </div>
+            <div class="back">
+              <h2>Portfolio</h2>
+              <p>
+                I just had to mentioned this portfolio. I built it using ruby on rails with gems for authentication and useful gems like rails admin for my admin panel
+              </p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div id="sinatra" class="tab-pane fade">
+      <h3>Sinatra</h3>
+      <div class="row">
+        <div class="col-md-4">
+      <div class="info-card">
+        <div id="iphone">
+          <h4>School system</h4>
+        </div>
+        <div class="front">
+          <%= image_tag("school.jpg", :class => "info-card", :class => "img-responsive")%>
+        </div>
+        <div class="back">
+          <h2>School system</h2>
+          <p>
+            A virtual school system that helps bring credibale information straight from the school. A parent can log in and track his/her children's progress in
+            terms of grades, assignments clubs and so on. Vist site for live demo(<em>Use credentials username:parenta, password:parenta</em>)
+            <br>Link:<a href="https://school-system254.herokuapp.com/" target="_blank">School system</a>
+          </p>
+        </div>
+      </div>
+    </div>
+<div class="col-md-4">
+      <div class="info-card">
+        <div id="iphone">
+          <h4>Tippy toes</h4>
+        </div>
+        <div class="front">
+          <%= image_tag("tippy.jpg", :class => "info-card", :class => "img-responsive")%>
+        </div>
+        <div class="back">
+          <h2>Tippy toes</h2>
+          <p>
+            A virtual online store that you can add shoe stores and add shoe brands to this shoe stores
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div id="js" class="tab-pane fade">
+      <h3>JavaScript</h3>
+      <div class="row">
+      <div class="col-md-4">
+      <div class="info-card">
+        <div id="iphone">
+          <h4>SmartFarm</h4>
+        </div>
+        <div class="front">
+          <%= image_tag("smartz.jpg", :class => "info-card", :class => "img-responsive")%>
+
+        </div>
+        <div class="back">
+          <h2>Smart farm</h2>
+          <p>
+            Smart farm is an online based library to help farmers learn more about crops in terms of where and when to plant type of soil to use and the like
+            <br>The site majors on crops key in the export market and a search function for all other crops as well
+          </p>
+        </div>
+    </div>
+  </div>
+<div class="col-md-4">
+      <div class="info-card">
+        <div id="iphone">
+          <h4>SmartDoggy(ember version)</h4>
+        </div>
+        <div class="front">
+          <%= image_tag("smartz.jpg", :class => "info-card", :class => "img-responsive")%>
+
+        </div>
+        <div class="back">
+          <h2>Smart Doggy(ember version)</h2>
+          <p>
+            Smartdoggy is a platform to help users find their perfect puppy a new best friend! Learn more about a puppy, learn tips and tricks to raise the puppy
+            and even read and write testimonials from previous customer.<em>Its not just a puppy, its a new bestfriend!</em>
+            <br><strong>Visit link:<a href="https://smartdoggy3317d.firebaseapp.com/" target="_blank">https://smartdoggy3317d.firebaseapp.com/</a></strong>
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+    <div id="html" class="tab-pane fade">
+      <h3>Menu 3</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+  </div>
+</div>
+<br><br>
+<hr>
+<div class="contact">
+  <div class="container">
+    <h3 id="fom">Contact Me</h3><br>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+    <img class="icon icons8-Contacts-Filled" width="50" height="50" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACq0lEQVRoQ+2Z8U0dMQyHf0wATABMQJmgMEFhgsIEwASlG7QTlE4ATEA7QdkAmIBuAPqkS0nv3eVix0+c0LP0pPfHOfFnx4njrOmdyNo74dAKpCKSHyR96r7j/4aku+73s0Lf9MkyInIq6UzSdsGSB0lHHZTJ4LGPI0Hw+A9Jh5WW/ZV0KYnoEKkmiQS5MkD0jb6Q9LWFJAqEKADSIiddhFxjRIH8kvTRZcGrEnmz4x0jAoTcePIa0NM7kIRTzBIBsi/p1jzzsIJ7ec0NhIQn8c2yAslcFrm0ziV9M4dDCqm1IkHeNNlx4LPHiwM6bL9sw2aJyBEmZfIt8+z/KzxO1GfF4aNAqJk+N4JQcx17x4gC+SOJUr1FOAjJEZdEgEQm+563El6BZPGPrLXcjnUr9hZyRLJ/726Wb5YjaeIWmCYIDIiKCGO1XK7cSZ68GAnCmNzD141ro+kgXBYIJfgXI4i7dM/niY4IOxjlSm1UiAYHKZFskmgQjLFExX0j7FMvA8Ry0rur3bmBhDkybKDMQ5ZtuHnbXdauxbhcVen/1kjIjhV9ILJjsftYciRFJOnWwA9+E7G06LpzdrCkSF5grrMnhTHj0kUqFZ2UOJQqroZ2CwieZwnl3fdUM2EcF6XdEYrfnR7Q/eY3eqlLXx0hDwhXWs6KsfeP/GzgnQTQ1BcGACP5IVxteYoYEiDJN5wzeWBaQIgAk5YecJJBAGBASViONV1FIOh3JfimHKmdNJ+EUgWP3mQtHsoRojP1ojVkLCBE2w1i2U6r17Tzw1GYqaVVWsNOW5rVBtuqUyD3lTnRbJ1hAHJms/99CWSO0Uj2L1TNJZCWO7jBwa5PF7qSJZCId0GXlRVKnEccB/+kBDLH/EiGLzycTiV7hXPm8ckKZB5xqMuRudlatOcFvX90M1NcZqMAAAAASUVORK5CYII=">
+    <br>
+    <p>+254726160664</p>
+    <br><br>
+
+        <img class="icon icons8-Email" width="64" height="64" src="data:image/png;base64,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">
+        <br><p><a href="#">nyoikelewis@gmail.com</a></p>
+      </div>
+    </div><br><br>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-2">
+        <img class="icon icons8-Instagram" width="50" height="50" src="data:image/png;base64,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">
+        <br><p><a href="https://www.instagram.com/_nyoike_/" target="_blank">Instagram</a></p>
+      </div>
+      <div class="col-md-2">
+        <img class="icon icons8-LinkedIn" width="48" height="48" href="https://www.linkedin.com/in/lewis-njoroge-a2285b148/" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACPklEQVRoQ+1Zu0oDQRQ9s+KLFIrgA8QHpNaIYGWRGP0AW20Uf0C00TQSbWIaH52dj0JLtbBTSUA7CxNTiA8QxUIRJUVABXdkgyua7GSyspvdwdn2XmbOuefcmWUugeAfERw/JAGnFZQKuF+BaHKQUHWcgARKCZaCxihRljHVuVNo34IWUuZPVwEyWkrgeXtRzKohX5iFgU0gmhxUKN12FPzX5ipV+hDqiBlhYRIgkUSMEPjdQIBSxGnIZ2hhJgFlPkHdAF7HoE77DLH+PwK+hios9Dcj0OpB7DaDyYN7JB5fbRfLMgUOh73wt3i+AWsk+reuxSHwMdWZB7YsmhSHQK4C8bsMgpsCKaD1wOJAc9ZGGviJfcF6wHavMDawrImFJ8BrYla8raYcM71N6GqsRldDVbYO2gm2fvaMjdQLty6WKfAXAt2rF9Cav7ayzBDo6eMrgptXSL+pTCKOErhJv6O9pqJglXn3iaMEuP74SghuXSN+mzFMd5zA8skTdi/TWRuN99T/us11xOupF4zt3bmPwNzxA2aPHn4By70QtaBmNe/KufsI1C2l8hrU3+rB4ZC36N8SRy3E+lfinWg/2UkCejV4VePFf1bVTK5UQCpgcDhKCwHs53XWswqvary4bOIcK5p+F+JVmBd3XIFi/yytzrPsHrAaWLHrmSYg/OMuRH9e16RVIok1EIwUK7MteX8ecOhoImcBAjVc6llBdiYAJcwabOjw5JTSFtuYWFQqYKJYtqRKBWwpq4lFPwGLCYVAo2mrCgAAAABJRU5ErkJggg==">
+        <br><p><a href="https://www.linkedin.com/in/lewis-njoroge-a2285b148/" target="_blank">Linkedin</a></p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="footer">
+  <hr>
+  <p><em>@copyright 2017</em></p>
 </div>
