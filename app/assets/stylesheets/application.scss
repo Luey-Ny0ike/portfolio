@@ -39,7 +39,7 @@
 
 .start {
   /* The image used */
-  background-image: url("lewis.jpg");
+  background-image: url("lewisb.jpg");
   flex-shrink: 0;
   min-width: 100%;
   min-height: 100%;
@@ -47,8 +47,8 @@
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  padding-top: 80px;
-  padding-bottom: 500px;
+  padding-top: 40px;
+  padding-bottom: 80px;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -58,12 +58,25 @@
     color: white;
 
     #jina {
+      font-family: 'Frijole', cursive;
       display: none;
       text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
     }
 
     #dina {
+      font-family: 'Permanent Marker', cursive;
       display: none;
+      text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+    }
+    #space{
+      padding-top: 390px;
+      padding-bottom: 0px;
+    }
+    #learn{
+      cursor: pointer;
+      display: none;
+      text-align: center;
+      font-family: 'Cinzel', serif;
       text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
     }
   }
