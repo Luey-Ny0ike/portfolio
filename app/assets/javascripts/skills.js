@@ -16,6 +16,10 @@
 //= require jquery
 
 $( document ).ready(function() {
+ $('#jina').fadeIn(2000)
+   event.preventDefault()
+ $('#dina').slideDown(4500)
+   event.preventDefault()
   $('.button1').click(function(){
     event.preventDefault()
     $('.description1').toggle(500)
