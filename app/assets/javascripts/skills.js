@@ -56,6 +56,13 @@ $( document ).ready(function() {
    event.preventDefault()
  $('#dina').slideDown(4500)
    event.preventDefault()
+   $('#learn').show(4700)
+   $("#learn").click(function() {
+     event.preventDefault();
+     $('html,body').animate({
+       scrollTop: 777
+     }, 'slow');
+   });
 $(window).scroll(function(){
   $('#greet').fadeIn(2000)
   event.preventDefault()
