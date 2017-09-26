@@ -20,6 +20,12 @@ $( document ).ready(function() {
    event.preventDefault()
  $('#dina').slideDown(4500)
    event.preventDefault()
+$(window).scroll(function(){
+  $('#greet').fadeIn(2000)
+  event.preventDefault()
+  $('#con').slideDown(4500)
+  event.preventDefault()
+});
   $('.button1').click(function(){
     event.preventDefault()
     $('.description1').toggle(500)
