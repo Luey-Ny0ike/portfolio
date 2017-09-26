@@ -36,32 +36,37 @@
   min-width: 100%;
   min-height: 100%;
 }
-.start{
+
+.start {
   /* The image used */
-  background-image: url(luey.jpg);
+  background-image: url("luey.jpg");
   flex-shrink: 0;
   min-width: 100%;
   min-height: 100%;
   /* Full height */
- -webkit-background-size: cover;
- -moz-background-size: cover;
- -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   padding-top: 80px;
   padding-bottom: 500px;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  .mwanzo{
+
+  .mwanzo {
     color: white;
-    #jina{
+
+    #jina {
       display: none;
     }
-    #dina{
+
+    #dina {
       display: none;
     }
   }
 }
+
 .about {
   h2 {
     text-align: center;
@@ -139,86 +144,107 @@
 .description1 {
   display: none;
 }
+
 .button2:hover {
   background-color: #4353ad;
   color: white;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-.description2{
+
+.description2 {
   display: none;
 }
+
 .button3:hover {
   background-color: #8e1401;
   color: white;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-.description3{
+
+.description3 {
   display: none;
 }
+
 .button4:hover {
   background-color: #808e00;
   color: white;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-.description4{
+
+.description4 {
   display: none;
 }
+
 .button5:hover {
   background-color: #1cb599;
   color: white;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-.description5{
+
+.description5 {
   display: none;
 }
+
 .button6:hover {
   background-color: #4CAF50;
   color: white;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-.description6{
+
+.description6 {
   display: none;
 }
+
 .button7:hover {
   background-color: #4CAF50;
   color: white;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-.description7{
+
+.description7 {
   display: none;
 }
+
 .button8:hover {
   background-color: #8c7e71;
   color: white;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-.description8{
+
+.description8 {
   display: none;
 }
+
 .button9:hover {
   background-color: #75d615;
   color: white;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-.description9{
+
+.description9 {
   display: none;
 }
+
 .button10:hover {
   background-color: #6b3baa;
   color: white;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-.description10{
+
+.description10 {
   display: none;
 }
+
 .button11:hover {
   background-color: #560768;
   color: white;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-.description11{
+
+.description11 {
   display: none;
 }
+
 #nyoike {
   text-align: center;
 }
@@ -299,9 +325,11 @@
     background: #333333;
   }
 }
-.contact{
+
+.contact {
   text-align: center;
-  #fom{
+
+  #fom {
     text-align: center;
     font-size: 37px;
     color: grey;
@@ -311,18 +339,22 @@
     font-size: 50px;
   }
 }
-.footer{
+
+.footer {
   text-align: center;
   color: grey;
   font-style: oblique;
 }
-.projects{
+
+.projects {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   background-color: white;
-  .projectz:hover{
+
+  .projectz:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
 }
-.pits{
+
+.pits {
   background-color: #e8eaed;
 }
