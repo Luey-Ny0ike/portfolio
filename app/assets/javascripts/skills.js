@@ -16,6 +16,36 @@
 //= require jquery
 
 $( document ).ready(function() {
+  $(".mtaa").click(function() {
+    event.preventDefault();
+    $('html,body').animate({
+      scrollTop: 50
+    }, 'slow');
+  });
+  $("#abouta").click(function() {
+    event.preventDefault();
+    $('html,body').animate({
+      scrollTop: 780
+    }, 'slow');
+  });
+  $("#skillo").click(function() {
+    event.preventDefault();
+    $('html,body').animate({
+      scrollTop: 1680
+    }, 'slow');
+  });
+  $("#projects").click(function() {
+    event.preventDefault();
+    $('html,body').animate({
+      scrollTop: 3100
+    }, 'slow');
+  });
+  $("#conx").click(function() {
+    event.preventDefault();
+    $('html,body').animate({
+      scrollTop: 4200
+    }, 'slow');
+  });
  $('#jina').fadeIn(2000)
    event.preventDefault()
  $('#dina').slideDown(4500)
