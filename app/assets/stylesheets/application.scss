@@ -75,9 +75,17 @@
     font-weight: bold;
     font-size: 40px;
   }
-  padding-left: 59px;
-  padding-right: 59px;
-  font-size: 16px;
+  #greet{
+    display: none;
+    font-size: 40px;
+  }
+  #con{
+    display: none;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-style: oblique;
+  }
+  background-color: #c4c5ce;
 }
 
 .quote {
