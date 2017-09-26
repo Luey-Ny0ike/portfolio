@@ -16,7 +16,13 @@
 //= require jquery
 
 $( document ).ready(function() {
-  $(".mtaa").click(function() {
+  $("#mtaa").click(function() {
+    event.preventDefault();
+    $('html,body').animate({
+      scrollTop: 20
+    }, 'slow');
+  });
+  $(".mtaaz").click(function() {
     event.preventDefault();
     $('html,body').animate({
       scrollTop: 50
