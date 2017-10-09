@@ -10,7 +10,7 @@
 
 <% if @comments.any? %>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Comment</th>
@@ -22,8 +22,7 @@
     <% @blog.comments.each do |comment| %>
     <tr>
       <td><%= comment.comment %></td>
-      <td>
-        ~<%= comment.user.email %></td>
+      <td><%= comment.user.email%></td>
 
       <% if user_signed_in? %>
       <td><%= link_to 'Edit', edit_blog_comment_path(@blog, comment) %></td>
@@ -34,7 +33,8 @@
   </tr>
 </tbody>
 </table>
-<div class="macomments"></div>
+<div class="macomments">
+</div>
 
 <br>
 <% else %>
